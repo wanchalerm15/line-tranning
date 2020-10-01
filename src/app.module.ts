@@ -4,6 +4,7 @@ import { AppService } from './app.service';
 import { ApiController } from './api/api.controller';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { SocketService } from './socket.service';
+import { LineSdkService } from './line-sdk.service';
 
 @Module({
   imports: [
@@ -22,7 +23,8 @@ import { SocketService } from './socket.service';
   controllers: [AppController, ApiController],
   providers: [
     AppService,
-    SocketService
+    SocketService,
+    LineSdkService
   ],
 })
 export class AppModule { }

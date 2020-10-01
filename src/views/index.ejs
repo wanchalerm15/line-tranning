@@ -1,14 +1,13 @@
 <%- include('./layouts/header.ejs') %>
 
-<div class="container">
+<div class="container" id="app">
     <div class="card">
         <h4 class="card-header"><%= message %> </h4>
         <div class="card-body">
-            <h5 class="card-title">Special title treatment</h5>
-            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
+            <button @click="onShowUserId()" class="btn btn-primary">ขอดู UserId</button>
         </div>
     </div>
 </div>
-
+<script charset="utf-8" src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
+<script src="/lift.js"></script>
 <%- include('./layouts/footer.ejs') %>
