@@ -1,0 +1,12 @@
+<%- include('../layouts/header.ejs') %>
+
+<div class="container" id="yam">
+    <div class="card">
+        <h4 class="card-header"><%= message %> </h4>
+        <ul>
+            <li v-for="item in items">{{ item }}</li>
+        </ul>
+    </div>
+</div>
+<script src="/script.js" defer></script>
+<%- include('../layouts/footer.ejs') %>

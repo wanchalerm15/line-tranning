@@ -1,0 +1,16 @@
+<%- include('../layouts/header.ejs') %>
+
+<div class="container">
+    <div class="card">
+        <h4 class="card-header"><%= message %> </h4>
+        <div class="card-body">
+            <ul>
+                <% items.forEach(item => { %>
+                    <li><%= item %> </li>
+                <% }); %>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<%- include('../layouts/footer.ejs') %>
