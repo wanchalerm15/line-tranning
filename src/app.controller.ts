@@ -31,4 +31,10 @@ export class AppController {
   pageThree() {
     return { message: 'หน้าที่สาม' };
   }
+
+  @Get('pages/four')
+  @Render('pages/four')
+  pageFour() {
+    return { message: 'หน้าที่สี่' };
+  }
 }

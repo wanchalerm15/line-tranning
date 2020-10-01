@@ -1,0 +1,55 @@
+<%- include('../layouts/header.ejs') %>
+
+<div class="container" id="app">
+    <div class="card">
+        <h4 class="card-header"><%= message %> </h4>
+        <div class="card-body">
+            <div class="row">
+                <div class="col-md-6">
+                    <form @submit.prevent="onSubmit($event)">
+                        <div class="form-group">
+                            <label for="">Message :</label>
+                            <input type="text" class="form-control" placeholder="Enter message here" id="message">
+                        </div>
+
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <button type="reset" class="btn btn-danger btn-block">Clear message</button>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 text-right">
+                                <div class="form-group">
+                                    <button type="submit" class="btn btn-primary btn-block">Send message</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-6">
+                    <div class="form-group">
+                        <label for="">List of message</label>
+                        <table class="table">
+                            <thead class="thead-light">
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Message</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr v-for="item in items">
+                                    <td>{{ item.name }}</td>
+                                    <td>{{ item.message }}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="/socket.js" defer></script>
+<%- include('../layouts/footer.ejs') %>
