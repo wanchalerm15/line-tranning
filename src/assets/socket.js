@@ -5,6 +5,7 @@ new Vue({
         items: []
     },
     created() {
+        socket.on('hello', message => console.log(message));
         socket.on('events', body => this.items.push(body));
         socket.on('connect', () => console.log(socket.id, ' Connected.'));
     },

@@ -7,7 +7,7 @@ export class SocketService {
     server: Server;
 
     @SubscribeMessage('events')
-    roomEvents(socket: Socket, @MessageBody() body: any) {
+    roomEvents(@MessageBody() body: any) {
         this.server.emit('events', body);
     }
 }
